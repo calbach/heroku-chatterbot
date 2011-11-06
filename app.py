@@ -1,10 +1,20 @@
 import os
 from flask import Flask
+from flask import request
+from chatterbotapi import ChatterBotFactory, ChatterBotType
+
 app = Flask(__name__)
+
+factory = ChatterBotFactory()
+
+bot = factory.create(ChatterBotType.CLEVERBOT)
+botsession = bot.create_session()
 
 @app.route("/")
 def hello():
-    return "Hello from Python!"
+    if request.method == 'GET':
+        msg = request.args.get('msg', '');
+        return botsession(msg)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
