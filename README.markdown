@@ -1,11 +1,11 @@
 # Chatterbot configured for heroku
 
-## Setup
-   virtualenv env
+### Setup
+    virtualenv env
 
-   . env/bin/activate
+    . env/bin/activate
 
-   easy_install Flask
+    easy_install Flask
    
-## To Run   
-   foreman start
+### To Run   
+    foreman start
