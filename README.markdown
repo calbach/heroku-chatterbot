@@ -7,3 +7,6 @@
    
 ### To Run   
     $ foreman start
+
+
+Uses the [Chatter Bot API](http://code.google.com/p/chatter-bot-api/ title="chatter-bot-api")
