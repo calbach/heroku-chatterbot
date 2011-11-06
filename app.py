@@ -14,7 +14,7 @@ botsession = bot.create_session()
 def hello():
     if request.method == 'GET':
         msg = request.args.get('msg', '');
-        return botsession(msg)
+        return botsession.think(msg)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
